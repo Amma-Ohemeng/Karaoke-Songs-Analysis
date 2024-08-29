@@ -1,0 +1,13 @@
+CREATE TABLE songs(id INTEGER PRIMARY KEY AUTO_INCREMENT, title TEXT, artist TEXT, mood TEXT, duration INTEGER, released INTEGER);
+INSERT INTO songs(title,artist,mood,duration,released) VALUE("Bohemian Rhaphsody","Queen","epic",60,1975);
+INSERT INTO songs(title,artist,mood,duration,released) VALUE("Let it go","Idina Menzel","epic",227,2013);
+INSERT INTO songs(title,artist,mood,duration,released) VALUE("I will survive","Gloria Gaynor","epic",198,1978);
+INSERT INTO songs(title,artist,mood,duration,released) VALUE("Twist and Shout","The Beatles","happy",152,1963);
+INSERT INTO songs(title,artist,mood,duration,released) VALUE("La Bamba","Ritchie Valens","happy",166,1958);
+INSERT INTO songs(title,artist,mood,duration,released) VALUE("I will always love you","Whitney Houston","epic",273,1992);
+INSERT INTO songs(title,artist,mood,duration,released) VALUE("Sweet Caroline","Neil Diamond","happy",201,1969);
+INSERT INTO songs(title,artist,mood,duration,released) VALUE("Call me maybe","Carly Rae Jepsen","happy",193,2011);
+SELECT * FROM songs;
+SELECT title FROM songs;
+SELECT title FROM songs WHERE mood = "epic" OR released>1990;
+SELECT title FROM songs WHERE mood = "epic" AND released>1990 AND duration<240;
